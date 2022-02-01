@@ -5,5 +5,5 @@ module.exports = async (bot) =>{
         const channel = guild.channels.cache.get('938077957489037312');
         channel.setName(`Total Member: ${memberCount.toLocaleString()}`);
         console.log('Updating Member Count');
-    }, 6000000);
+    }, 60000);
 }
