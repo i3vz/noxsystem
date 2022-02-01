@@ -4,7 +4,6 @@ const bot = new Client({ disableEveryone: true })
 const YouTube = require('simple-youtube-api')
 const ytdl = require('ytdl-core')
 const queue = new Map()
-const keepAlive = require('./server.js');
 const memberCounter = require('./counters/member-counter');
 const ms = require('ms');
 const youtube = new YouTube ("AIzaSyBtXM5KMlw7nITyi_kDDHkB-z-TeKYLOlg");
@@ -18,7 +17,6 @@ bot.commands = new Collection();
 bot.aliases = new Collection();
 bot.memberCounter = new Collection();
 bot.catecories = fs.readdirSync("./commands/");
-keepAlive();
 ["command"].forEach(handler=>{ 
   require(`./handlers/${handler}`)(bot); 
 });
