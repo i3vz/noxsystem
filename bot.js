@@ -11,7 +11,6 @@ const { connect } = require('http2');
 const { connection } = require('mongoose');
 const dateformat = require('dateformat');
 const { error } = require('console');
-const config = require('./config.json');
 const { constants } = require('buffer');
 const {prefix, GOOGLE_API_KEY } = require('./config.json');
 bot.commands = new Collection();
@@ -317,4 +316,4 @@ bot.on('ready', () => {
   
   //////////////////////////////////////////////////////////////////
   
-    bot.login(config.token)
+    bot.login(process.env.token)
